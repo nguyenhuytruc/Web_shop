@@ -1,0 +1,1 @@
+<p>Cám ơn bạn đã ủng hộ shop, chúng tối sẽ liên hệ bạn trong thời gian sớm nhất ^-^ !!!</p>
