@@ -20,7 +20,7 @@ if (isset($_GET['dangxuat']) && $_GET['dangxuat'] == 1) {
         ?>
         <li><a href="index.php?quanli=giohang">Giỏ hàng</a></li>
         <li><a href="index.php?quanli=tintuc">Tin tức</a></li>
-        <li><a href="index.php?quanli=lienhe">Liên hệ</a></li>
+        <!-- <li><a href="index.php?quanli=lienhe">Liên hệ</a></li> -->
         <?php
         if (isset($_SESSION['dangky'])) {
         ?>
