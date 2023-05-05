@@ -7,7 +7,7 @@ while ($row_chitiet = mysqli_fetch_array($query_chitiet)) {
 ?>
     <div class="wrapper-chitiet">
         <div class="hinhanh-sanpham">
-            <img src="admincp/modules/quanlisp/upload/<?php echo $row_chitiet['hinhanh'] ?>" alt="">
+            <img src="admincp/modules/quanlisp/upload/<?php echo $row_chitiet['hinhanh'] ?>" alt="" style="width: 300px">
         </div>
         <form action="pages/main/themgiohang.php?idsanpham=<?php echo $row_chitiet['id'] ?>" , method="POST">
             <div class="chitiet-sanpham">
@@ -21,6 +21,21 @@ while ($row_chitiet = mysqli_fetch_array($query_chitiet)) {
             </div>
         </form>
     </div>
+    <div class="clear"></div>
+    <div class="tabs">
+        <ul id="tabs-nav">
+            <li><a href="#tab1">Tóm tắt</a></li>
+            <li><a href="#tab2">Nội dung</a></li>
+        </ul> <!-- END tabs-nav -->
+        <div id="tabs-content">
+            <div id="tab1" class="tab-content">
+                <p><?php echo $row_chitiet['tomtat'] ?></p>
+            </div>
+            <div id="tab2" class="tab-content">
+                <p><?php echo $row_chitiet['noidung'] ?></p>
+            </div>
+        </div> <!-- END tabs-content -->
+    </div> <!-- END tabs -->
 <?php
 }
 ?>

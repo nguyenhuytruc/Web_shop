@@ -29,7 +29,7 @@ $query_lietke_sanpham = mysqli_query($mysqli, $sql_lietke_sanpham);
             <td style="text-align: center;"><?php echo $stt ?></td>
             <td style="text-align: center;"><?php echo $row['tensanpham'] ?></td>
             <td style="text-align: center;"> <img src="modules/quanlisp/upload/<?php echo $row['hinhanh'] ?>" alt="" width="120px"></td>
-            <td style="text-align: center;"><?php echo $row['giasp'] ?></td>
+            <td style="text-align: center;"><?php echo number_format($row['giasp'],0,',','.'). ' vnđ' ?></td>
             <td style="text-align: center;"><?php echo $row['soluong'] ?></td>
             <td style="text-align: center;"><?php echo $row['masp'] ?></td>
             <td style="text-align: center;"><?php echo $row['tomtat'] ?></td>

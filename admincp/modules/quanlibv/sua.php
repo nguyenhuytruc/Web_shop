@@ -1,29 +1,17 @@
 <?php
-$sql_sua_sanpham = "SELECT * FROM tbl_sanpham WHERE id = '$_GET[id]' LIMIT 1";
-$query_sua_sanpham = mysqli_query($mysqli, $sql_sua_sanpham);
+$sql_sua_bv = "SELECT * FROM tbl_baiviet WHERE id = '$_GET[id]' LIMIT 1";
+$query_sua_bv = mysqli_query($mysqli, $sql_sua_bv);
 ?>
 
 <p>Sửa sản phẩm</p>
-<form action="modules/quanlisp/xuly.php?id=<?php echo $_GET['id'] ?>" , method="POST" enctype="multipart/form-data">
+<form action="modules/quanlibv/xuly.php?id=<?php echo $_GET['id'] ?>" , method="POST" enctype="multipart/form-data">
     <table>
         <?php
-        while ($row = mysqli_fetch_array($query_sua_sanpham)) {
+        while ($row = mysqli_fetch_array($query_sua_bv)) {
         ?>
             <tr>
                 <td>Tên sản phẩm</td>
-                <td><input type="text" name="tensanpham" value="<?php echo $row['tensanpham'] ?>"></td>
-            </tr>
-            <tr>
-                <td>Mã sản phẩm</td>
-                <td><input type="text" name="masp" value="<?php echo $row['masp'] ?>"></td>
-            </tr>
-            <tr>
-                <td>Giá</td>
-                <td><input type="text" name="giasp" value="<?php echo $row['giasp'] ?>"></td>
-            </tr>
-            <tr>
-                <td>Số lượng</td>
-                <td><input type="text" name="soluong" value="<?php echo $row['soluong'] ?>"></td>
+                <td><input type="text" name="tenbaiviet" value="<?php echo $row['tenbaiviet'] ?>"></td>
             </tr>
             <tr>
                 <td>Hình ảnh</td>
@@ -66,16 +54,16 @@ $query_sua_sanpham = mysqli_query($mysqli, $sql_sua_sanpham);
                 <td>
                     <select name="danhmuc">
                         <?php
-                        $sql_danhmuc = "SELECT * FROM tbl_danhmuc ORDER BY id DESC";
+                        $sql_danhmuc = "SELECT * FROM tbl_danhmucbv ORDER BY id DESC";
                         $query_danhmuc = mysqli_query($mysqli, $sql_danhmuc);
                         while ($row_danhmuc = mysqli_fetch_array($query_danhmuc)) {
-                            if ($row_danhmuc['id'] == $row['id_danhmuc']) {
+                            if ($row_danhmuc['id'] == $row['id_danhmucbv']) {
                         ?>
-                                <option value="<?php echo $row_danhmuc['id'] ?>" selected><?php echo $row_danhmuc['tendanhmuc'] ?></option>
+                                <option value="<?php echo $row_danhmuc['id'] ?>" selected><?php echo $row_danhmuc['tendanhmucbv'] ?></option>
                             <?php
                             } else {
                             ?>
-                                <option value="<?php echo $row_danhmuc['id'] ?>"><?php echo $row_danhmuc['tendanhmuc'] ?></option>
+                                <option value="<?php echo $row_danhmuc['id'] ?>"><?php echo $row_danhmuc['tendanhmucbv'] ?></option>
                         <?php
                             }
                         }
@@ -85,7 +73,7 @@ $query_sua_sanpham = mysqli_query($mysqli, $sql_sua_sanpham);
             </tr>
             <tr>
                 <td></td>
-                <td><input type="submit" name="suasanpham" value="Sửa sản phẩm"></td>
+                <td><input type="submit" name="suabaiviet" value="Sửa bài viết"></td>
             </tr>
         <?php
         }

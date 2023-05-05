@@ -27,6 +27,12 @@ if (!isset($_SESSION['dangnhap'])) {
         include("modules/footer.php");
         ?>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.21.0/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace('tomtat');
+        CKEDITOR.replace('noidung');
+    </script>
 </body>
 
 </html>

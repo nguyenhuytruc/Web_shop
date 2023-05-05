@@ -23,6 +23,16 @@
         include("modules/quanlidonhang/lietke.php");
     } elseif ($temp == 'donhang' && $query == 'xemdonhang') {
         include("modules/quanlidonhang/xemdonhang.php");
+    } elseif ($temp == 'quanlidanhmucbv' && $query == 'them') {
+        include("modules/quanlidanhmucbv/them.php");
+        include("modules/quanlidanhmucbv/lietke.php");
+    } elseif ($temp == 'quanlidanhmucbv' && $query == 'sua') {
+        include("modules/quanlidanhmucbv/sua.php");
+    } elseif ($temp == 'quanlibv' && $query == 'them') {
+        include("modules/quanlibv/them.php");
+        include("modules/quanlibv/lietke.php");
+    } elseif ($temp == 'quanlibv' && $query == 'sua') {
+        include("modules/quanlibv/sua.php");
     } else {
         include("modules/dashboard.php");
     }

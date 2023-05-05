@@ -12,8 +12,12 @@
 
       if ($temp == 'danhmuc') {
          include("main/danhmuc.php");
+      } elseif ($temp == 'danhmucbv') {
+         include("main/danhmucbv.php");
       } elseif ($temp == 'sanpham') {
          include("main/sanpham.php");
+      } elseif ($temp == 'baiviet') {
+         include("main/baiviet.php");
       } elseif ($temp == 'giohang') {
          include("main/giohang.php");
       } elseif ($temp == 'dangky') {

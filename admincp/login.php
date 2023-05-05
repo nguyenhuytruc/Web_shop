@@ -111,7 +111,7 @@ if (isset($_POST['dangnhap'])) {
             <h1 class="form-heading">Login Admin</h1>
             <div class="form-group">
                 <i class="far fa-user"></i>
-                <input type="text" class="form-input" placeholder="Tên đăng nhập" name="username">
+                <input type="text" class="form-input" placeholder="Tên đăng nhập" name="username" autocomplete="off">
             </div>
             <div class="form-group">
                 <i class="fas fa-key"></i>

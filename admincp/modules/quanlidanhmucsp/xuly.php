@@ -17,6 +17,6 @@ include("../../config/config.php");
         $id = $_GET['id'];
         $sql_xoa = "DELETE FROM tbl_danhmuc WHERE id = '$id'";
         mysqli_query($mysqli, $sql_xoa);
-        header('Location: ../../index.php?action=quanlidanhmucsanpham');
+        header('Location: ../../index.php?action=quanlidanhmucsanpham&query=them');
     }
 ?>
