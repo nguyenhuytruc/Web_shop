@@ -12,6 +12,7 @@ $query_lietke_dh = mysqli_query($mysqli, $sql_lietke_dh);
         <th>Email</th>
         <th>Điện thoại</th>
         <th>Địa chỉ</th>
+        <th>Ngày đặt hàng</th>
         <th>Hành động</th>
     </tr>
     <?php
@@ -26,6 +27,7 @@ $query_lietke_dh = mysqli_query($mysqli, $sql_lietke_dh);
             <td style="text-align: center;"><?php echo $row['email'] ?></td>
             <td style="text-align: center;"><?php echo $row['dienthoai'] ?></td>
             <td style="text-align: center;"><?php echo $row['diachi'] ?></td>
+            <td style="text-align: center;"><?php echo $row['ngay_dat'] ?></td>
             <td>
                 <a href="index.php?action=donhang&query=xemdonhang&code=<?php echo $row['code_cart'] ?>">Xem đơn hàng</a>
             </td>
