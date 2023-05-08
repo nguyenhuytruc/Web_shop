@@ -9,7 +9,7 @@ $query_lietke_dh = mysqli_query($mysqli, $sql_lietke_dh);
     <tr>
         <th>Thứ tự</th>
         <th>Mã đơn hàng</th>
-        <th>Tên Sản phẩm</th>
+        <th>Tên sản phẩm</th>
         <th>Số lượng</th>
         <th>Đơn giá</th>
         <th>Thành tiền</th>
@@ -33,7 +33,7 @@ $query_lietke_dh = mysqli_query($mysqli, $sql_lietke_dh);
     <?php
     }
     ?>
-    <td colspan="6">
+    <td colspan="6" style="text-align: center;">
         Tổng tiền: <?php echo number_format($tongtien, 0, ',', '.') . ' vnđ' ?>
     </td>
 </table>

@@ -6,7 +6,7 @@ require("../../carbon/vendor/autoload.php");
 use Carbon\Carbon;
 use Carbon\CarbonInterval;
 
-$ngay_dat = Carbon::now('Asia/Ho_Chi_Minh');
+$ngay_dat = Carbon::now('Asia/Ho_Chi_Minh')->toDateString();
 $id_khachhang = $_SESSION['id'];
 $code_order = rand(0, 9999);
 $insert_cart = "INSERT INTO tbl_cart (id, id_khachhang, code_cart, cart_status, ngay_dat) VALUES (null, '$id_khachhang', '$code_order', 1,'$ngay_dat')";
@@ -26,11 +26,11 @@ if ($query) {
         $noidung.= "<ul>
                         <li>Tên sản phẩm: ".$value['tensanpham']."</li>
                         <li>Mã sản phẩm: ".$value['masp']."</li>
-                        <li>Giá sản phẩm: ".number_format($value['giasp'],0,',','.')."</li>
+                        <li>Giá sản phẩm: ".number_format($value['giasp'],0,',','.').' vnđ'."</li>
                         <li>Số lượng mua: ".$value['soluong']."</li>
                     </ul>";
     }
-    $mailKhachHang = $_SESSION['email'];
+    $mailKhachHang = $_SESSION['dangky'];
     $mail = new Mail();
     $mail->mailDatHang($mailKhachHang, $tieude, $noidung);
 }

@@ -27,7 +27,7 @@ class Mail
 
             //Recipients
             $mail->setFrom('huytruc1201@gmail.com', 'Mailer');
-            $mail->addAddress($mailKhachHang, 'Phuoc Nguyen');     // Add a recipient
+            $mail->addAddress($mailKhachHang);     // Add a recipient
             // $mail->addAddress('ellen@example.com');               // Name is optional
             // $mail->addReplyTo('info@example.com', 'Information');
             $mail->addCC('huytruc1201@gmail.com');
